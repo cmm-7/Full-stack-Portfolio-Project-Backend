@@ -1,0 +1,26 @@
+{
+  "name": "full-stack_portfolio-project-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cmm-7/Full-stack-Portfolio-Project-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cmm-7/Full-stack-Portfolio-Project-Backend/issues"
+  },
+  "homepage": "https://github.com/cmm-7/Full-stack-Portfolio-Project-Backend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  }
+}
