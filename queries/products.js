@@ -55,11 +55,13 @@ const updateProduct = async (id, product) => {
   const { name, price, description, type, img } = product;
   try {
     const updatedProduct = await db.one(
-      "UPDATE products SET name=$1, price=$2, description=$3, type=$4, img=$5, WHERE id=$6 RETURNING *",
+      "UPDATE products SET name=$1, price=$2, description=$3, type=$4, img=$5 WHERE id=$6 RETURNING *",
       [name, price, description, type, img, id]
     );
+    console.log(updatedProduct);
     return updatedProduct;
   } catch (error) {
+    console.error(error);
     return error;
   }
 };

@@ -5,7 +5,7 @@ const { getAllProducts, getProduct, createProduct, deleteProduct, updateProduct}
 // INDEX
 products.get("/", async (req, res) => {
     const allProducts = await getAllProducts();
-    console.log(allProducts);
+    // console.log(allProducts);
     res.status(200).json(allProducts);
   });
   
@@ -24,14 +24,13 @@ products.get("/", async (req, res) => {
   products.post("/", async (req, res) => {
     // console.log(req.body)
     if (!req.body.img) {
-      req.body.img =
-        "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image";
+      req.body.img = "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image";
     }
     try {
       const product = await createProduct(req.body);
       res.json(product);
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       res.status(400).json({ error });
     }
   });
@@ -51,8 +50,8 @@ products.get("/", async (req, res) => {
   products.put("/:id", async (req, res) => {
     const { id } = req.params;
   
-    if (!req.body.image) {
-      req.body.image =
+    if (!req.body.img) {
+      req.body.img =
         "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image";
     }
     

@@ -5,6 +5,7 @@
   "main": "server.js",
   "scripts": {
     "db:init": "psql -U postgres -f db/schema.sql $DATABASE_URL",
+    "db:seed": "psql -U postgres -f db/seed.sql $DATABASE_URL",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
